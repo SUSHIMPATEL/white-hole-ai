@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b18">
+  <title>WHITE HOLE | AI Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">W</div>
+        <div><div class="brand-name">WHITE HOLE</div><div class="brand-sub">PERSONAL AI</div></div>
+      </div>
+      <button class="new-chat" id="newChat"><span>＋</span> New chat</button>
+      <div class="side-note">YOUR SPACE FOR IDEAS</div>
+      <div class="sidebar-bottom">
+        <div class="status-dot"></div><span>Local AI · Ollama</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuBtn" aria-label="Open menu">☰</button>
+        <div class="top-title">WHITE HOLE <span>AI</span></div>
+        <div class="online"><i></i> LOCAL</div>
+      </header>
+
+      <section class="chat-area" id="chatArea">
+        <div class="welcome" id="welcome">
+          <div class="orb"><div class="orb-core"></div></div>
+          <div class="eyebrow">YOUR PERSONAL AI ASSISTANT</div>
+          <h1>Welcome to <span>WHITE HOLE</span></h1>
+          <p>Ask anything. Explore ideas. Make something amazing.</p>
+          <div class="suggestions">
+            <button class="suggestion">Explain a difficult topic simply</button>
+            <button class="suggestion">Help me write something</button>
+            <button class="suggestion">Give me a creative idea</button>
+            <button class="suggestion">Help me with coding</button>
+          </div>
+        </div>
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </section>
+
+      <footer class="composer-wrap">
+        <form class="composer" id="chatForm">
+          <textarea id="prompt" rows="1" placeholder="Message WHITE HOLE..." aria-label="Message WHITE HOLE"></textarea>
+          <button class="send" id="sendBtn" type="submit" aria-label="Send message">➤</button>
+        </form>
+        <div class="disclaimer">WHITE HOLE runs locally on your computer using Ollama. AI can make mistakes.</div>
+      </footer>
+    </main>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
